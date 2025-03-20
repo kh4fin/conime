@@ -96,21 +96,21 @@ const Navbar = () => {
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(true)}
-              className="bg-gray-700 hover:bg-gray-600 p-2 rounded transition-colors"
+              className="dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-500 p-2 rounded transition-colors"
             >
               <FiSearch size={20} />
             </button>
           </div>
           <button
             onClick={toggleDarkMode}
-            className="ml-2  hover:bg-gray-200 dark:hover:bg-gray-600 p-2 rounded transition-colors"
+            className="ml-2 hover:bg-gray-200 dark:hover:bg-gray-600 p-2 rounded transition-colors"
           >
             {darkMode ? <FiSun size={20} /> : <FiMoon size={20} />}
           </button>
           {/* Mobile Menu Toggle */}
           <button
             onClick={handleToggleMenu}
-            className="ml-2 md:hidden bg-gray-700 hover:bg-gray-600 p-2 rounded transition-colors"
+            className="ml-2 md:hidden dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-500 p-2 rounded transition-colors"
           >
             {isOpen ? <FiX size={24} /> : <FiMenu size={24} />}
           </button>

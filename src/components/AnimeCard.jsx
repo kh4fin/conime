@@ -14,7 +14,7 @@ const AnimeCard = ({ anime }) => {
         <img
           src={anime.poster}
           alt={anime.title}
-          className="w-full h-64 object-container"
+          className="w-full h-64 object-cover"
         />
         <div className="absolute bottom-0 left-0 right-0 bg-black opacity-70 p-2">
           <h3 className="font-semibold text-lg text-white">
