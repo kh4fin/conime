@@ -96,7 +96,7 @@ const Navbar = () => {
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(true)}
-              className="dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-500 p-2 rounded transition-colors"
+              className="hover:bg-gray-200 dark:hover:bg-gray-500 p-2 rounded transition-colors"
             >
               <FiSearch size={20} />
             </button>
@@ -110,7 +110,7 @@ const Navbar = () => {
           {/* Mobile Menu Toggle */}
           <button
             onClick={handleToggleMenu}
-            className="ml-2 md:hidden dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-500 p-2 rounded transition-colors"
+            className="ml-2 md:hidden hover:bg-gray-200 dark:hover:bg-gray-500 p-2 rounded transition-colors"
           >
             {isOpen ? <FiX size={24} /> : <FiMenu size={24} />}
           </button>
