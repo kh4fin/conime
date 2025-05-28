@@ -17,9 +17,9 @@ const AnimeCard = ({ anime }) => {
           className="w-full h-64 object-cover"
         />
         <div className="absolute bottom-0 left-0 right-0 bg-black opacity-70 p-2">
-          <h3 className="font-semibold text-lg text-white">
+          <h5 className="font-semibold text-lg text-white">
             {anime.title} {anime.episodes ? `eps ${anime.episodes}` : ""}
-          </h3>
+          </h5>
         </div>
       </div>
     </Link>
