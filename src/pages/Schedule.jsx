@@ -9,7 +9,7 @@ const Schedule = () => {
 
   useEffect(() => {
     axios
-      .get("https://wajik-anime-api.vercel.app/samehadaku/schedule")
+      .get("https://kh4fin-nime-production.up.railway.app/otakudesu/schedule")
       .then((response) => {
         // Data jadwal rilis berada pada response.data.data.days
         setSchedule(response.data.data.days);

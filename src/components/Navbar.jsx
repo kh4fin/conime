@@ -70,16 +70,16 @@ const Navbar = () => {
               Completed
             </Link>
           </li>
-          <li>
+          {/* <li>
             <Link to="/anime-movie" className="hover:text-blue-300">
               Movie
             </Link>
-          </li>
-          <li>
+          </li> */}
+          {/* <li>
             <Link to="/anime-batch" className="hover:text-blue-300">
               Batch
             </Link>
-          </li>
+          </li> */}
           <li>
             <Link to="/genres" className="hover:text-blue-300">
               Genre
@@ -157,7 +157,7 @@ const Navbar = () => {
                 Anime Completed
               </Link>
             </li>
-            <li>
+            {/* <li>
               <Link
                 onClick={() => setIsOpen(false)}
                 to="/anime-movie"
@@ -174,7 +174,7 @@ const Navbar = () => {
               >
                 Batch
               </Link>
-            </li>
+            </li> */}
             <li>
               <Link
                 onClick={() => setIsOpen(false)}

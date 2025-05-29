@@ -14,7 +14,9 @@ const AnimeDetail = () => {
   useEffect(() => {
     setLoading(true);
     axios
-      .get(`https://wajik-anime-api.vercel.app/samehadaku/anime/${animeId}`)
+      .get(
+        `https://kh4fin-nime-production.up.railway.app/otakudesu/anime/${animeId}`
+      )
       .then((response) => {
         // Data detail anime diharapkan ada di response.data.data
         setAnimeDetail(response.data.data);

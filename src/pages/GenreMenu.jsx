@@ -9,7 +9,7 @@ const GenreMenu = () => {
 
   useEffect(() => {
     axios
-      .get("https://wajik-anime-api.vercel.app/samehadaku/genres")
+      .get("https://kh4fin-nime-production.up.railway.app/otakudesu/genres")
       .then((response) => {
         // Data genre berada pada response.data.data.genreList
         setGenres(response.data.data.genreList);

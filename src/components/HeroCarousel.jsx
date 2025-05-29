@@ -9,9 +9,9 @@ const HeroCarousel = () => {
 
   useEffect(() => {
     axios
-      .get("https://wajik-anime-api.vercel.app/samehadaku/home")
+      .get("https://kh4fin-nime-production.up.railway.app/otakudesu/home")
       .then((response) => {
-        const topAnimes = response.data.data.recent.animeList.slice(0, 5);
+        const topAnimes = response.data.data.ongoing.animeList.slice(0, 5);
         setAnimes(topAnimes);
         setLoading(false);
       })
@@ -98,7 +98,7 @@ const HeroCarousel = () => {
           <img
             src={currentAnime.poster}
             alt={currentAnime.title}
-            className="w-full h-40 md:h-80 object-cover rounded-lg"
+            className="w-full h-40 md:h-80 object-contain rounded-lg"
           />
         </div>
       </div>

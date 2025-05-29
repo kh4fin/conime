@@ -15,7 +15,9 @@ const VideoPlayer = ({ episodeId, streamUrl: externalStreamUrl }) => {
     if (!episodeId) return;
     setLoading(true);
     axios
-      .get(`https://wajik-anime-api.vercel.app/samehadaku/episode/${episodeId}`)
+      .get(
+        `https://kh4fin-nime-production.up.railway.app/otakudesu/episode/${episodeId}`
+      )
       .then((response) => {
         const url =
           response.data.data?.defaultStreamingUrl ||

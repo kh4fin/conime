@@ -15,7 +15,7 @@ const Batch = () => {
 
     axios
       .get(
-        `https://wajik-anime-api.vercel.app/samehadaku/batch?page=${recentPage}`
+        `https://kh4fin-nime-production.up.railway.app/otakudesu/batch?page=${recentPage}`
       )
       .then((response) => {
         const recentData = response.data.data;

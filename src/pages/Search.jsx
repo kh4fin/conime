@@ -1,82 +1,3 @@
-// // src/pages/Search.jsx
-// import React, { useState, useEffect } from "react";
-// import axios from "axios";
-// import { useLocation, Link } from "react-router-dom";
-
-// // Hook untuk mengambil query params
-// function useQuery() {
-//   return new URLSearchParams(useLocation().search);
-// }
-
-// const Search = () => {
-//   const query = useQuery();
-//   const searchTerm = query.get("q");
-//   const [results, setResults] = useState([]);
-//   const [loading, setLoading] = useState(true);
-
-//   useEffect(() => {
-//     if (searchTerm) {
-//       setLoading(true);
-//       axios
-//         .get(
-//           `https://wajik-anime-api.vercel.app/samehadaku/search?q=${encodeURIComponent(
-//             searchTerm
-//           )}`
-//         )
-//         .then((response) => {
-//           // Asumsi hasilnya ada di response.data.data, sesuaikan jika perlu
-//           console.log(response.data);
-//           setResults(response.data.data);
-//           setLoading(false);
-//         })
-//         .catch((error) => {
-//           console.error("Error searching:", error);
-//           setLoading(false);
-//         });
-//     } else {
-//       setResults([]);
-//       setLoading(false);
-//     }
-//   }, [searchTerm]);
-
-//   return (
-//     <div className="container mx-auto p-6">
-//       <h1 className="text-3xl font-bold mb-4">
-//         Search Results for "{searchTerm}"
-//       </h1>
-//       {loading ? (
-//         <p>Loading...</p>
-//       ) : results && results.length > 0 ? (
-//         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-//           {results.map((anime) => (
-//             <Link
-//               key={anime.animeId}
-//               to={`/anime/${anime.animeId}`}
-//               className="block p-4 bg-gray-700 hover:bg-gray-600 text-white rounded transition-colors"
-//             >
-//               <div className="font-bold">
-//                 {anime.title} {anime.episodes ? `eps ${anime.episodes}` : ""}
-//               </div>
-//               {anime.poster && (
-//                 <img
-//                   src={anime.poster}
-//                   alt={anime.title}
-//                   className="mt-2 rounded-lg shadow"
-//                 />
-//               )}
-//             </Link>
-//           ))}
-//         </div>
-//       ) : (
-//         <p>No results found.</p>
-//       )}
-//     </div>
-//   );
-// };
-
-// export default Search;
-
-// src/pages/Search.jsx
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import AnimeCard from "../components/AnimeCard";
@@ -100,7 +21,7 @@ const Search = () => {
 
     axios
       .get(
-        `https://wajik-anime-api.vercel.app/samehadaku/search?q=${encodeURIComponent(
+        `https://kh4fin-nime-production.up.railway.app/otakudesu/search?q=${encodeURIComponent(
           searchTerm
         )}`
       )

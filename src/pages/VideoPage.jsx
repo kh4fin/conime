@@ -18,7 +18,9 @@ const VideoPage = () => {
   useEffect(() => {
     setLoadingEpisode(true);
     axios
-      .get(`https://wajik-anime-api.vercel.app/samehadaku/episode/${episodeId}`)
+      .get(
+        `https://kh4fin-nime-production.up.railway.app/otakudesu/episode/${episodeId}`
+      )
       .then((response) => {
         const data = response.data.data;
         setEpisodeData(data);
@@ -67,7 +69,7 @@ const VideoPage = () => {
       setLoadingAnimeDetail(true);
       axios
         .get(
-          `https://wajik-anime-api.vercel.app/samehadaku/anime/${episodeData.animeId}`
+          `https://kh4fin-nime-production.up.railway.app/otakudesu/anime/${episodeData.animeId}`
         )
         .then((response) => {
           setAnimeDetail(response.data.data);
@@ -83,7 +85,9 @@ const VideoPage = () => {
   const fetchServerLink = (serverId) => {
     setLoadingStream(true);
     axios
-      .get(`https://wajik-anime-api.vercel.app/samehadaku/server/${serverId}`)
+      .get(
+        `https://kh4fin-nime-production.up.railway.app/otakudesu/server/${serverId}`
+      )
       .then((response) => {
         console.log("Selected serverId:", serverId);
         const url = response.data.data?.url;
@@ -235,7 +239,43 @@ const VideoPage = () => {
           </div>
 
           {/* Tombol Download */}
-          {episodeData.downloadUrl && episodeData.downloadUrl.formats && (
+          {episodeData.downloadUrl && episodeData.downloadUrl.qualities && (
+            <div className="mt-8">
+              <h2 className="text-2xl font-semibold mb-4 text-center dark:text-gray-100">
+                Download Episode
+              </h2>
+              <div className="space-y-6">
+                {episodeData.downloadUrl.qualities.map((quality) => (
+                  <div
+                    key={quality.title}
+                    className="bg-gray-100 dark:bg-gray-800 p-4 rounded-lg shadow-lg"
+                  >
+                    <h3 className="text-xl font-semibold text-gray-500 dark:text-gray-100 mb-3">
+                      {quality.title}{" "}
+                      <span className="text-sm text-gray-400">
+                        ({quality.size})
+                      </span>
+                    </h3>
+                    <div className="flex flex-wrap gap-2">
+                      {quality.urls.map((urlObj) => (
+                        <a
+                          key={urlObj.title}
+                          href={urlObj.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="block text-center px-3 py-2 bg-gray-700 dark:bg-gray-100 text-white dark:text-gray-800 rounded hover:bg-gray-600 dark:hover:bg-gray-200 transition-colors text-xs"
+                        >
+                          {urlObj.title.trim()}
+                        </a>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* {episodeData.downloadUrl && episodeData.downloadUrl.formats && (
             <div className="mt-8">
               <h2 className="text-2xl font-semibold mb-4 text-center dark:text-gray-100">
                 Download Episode
@@ -278,7 +318,7 @@ const VideoPage = () => {
                 ))}
               </div>
             </div>
-          )}
+          )} */}
         </>
       )}
     </div>

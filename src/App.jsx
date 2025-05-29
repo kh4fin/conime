@@ -33,8 +33,8 @@ function App() {
               <Route path="/jadwal-rilis" element={<Schedule />} />
               <Route path="/daftar-anime" element={<DaftarAnime />} />
               <Route path="/anime-completed" element={<Completed />} />
-              <Route path="/anime-movie" element={<Movies />} />
-              <Route path="/anime-batch" element={<Batch />} />
+              {/* <Route path="/anime-movie" element={<Movies />} /> */}
+              {/* <Route path="/anime-batch" element={<Batch />} /> */}
               <Route path="/search" element={<Search />} />
             </Routes>
           </main>

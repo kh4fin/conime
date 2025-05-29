@@ -9,7 +9,7 @@ const DaftarAnime = () => {
 
   useEffect(() => {
     axios
-      .get("https://wajik-anime-api.vercel.app/samehadaku/anime")
+      .get("https://kh4fin-nime-production.up.railway.app/otakudesu/anime")
       .then((response) => {
         setAnimeListData(response.data.data.list);
         setLoading(false);

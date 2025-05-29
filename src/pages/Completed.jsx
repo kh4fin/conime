@@ -15,7 +15,7 @@ const Completed = () => {
 
     axios
       .get(
-        `https://wajik-anime-api.vercel.app/samehadaku/completed?page=${recentPage}`
+        `https://kh4fin-nime-production.up.railway.app/otakudesu/completed?page=${recentPage}`
       )
       .then((response) => {
         const recentData = response.data.data;

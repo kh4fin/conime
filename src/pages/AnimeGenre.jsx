@@ -18,7 +18,7 @@ const AnimeGenre = () => {
 
     axios
       .get(
-        `https://wajik-anime-api.vercel.app/samehadaku/genres/${genreId}?page=${recentPage}`
+        `https://kh4fin-nime-production.up.railway.app/otakudesu/genres/${genreId}?page=${recentPage}`
       )
       .then((response) => {
         const recentData = response.data.data;
