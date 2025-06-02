@@ -78,7 +78,8 @@ const HeroCarousel = () => {
         </button>
         <div className="w-1/2 pr-4 text-white">
           <h1 className="text-xl md:text-4xl font-bold mb-2">
-            {currentAnime.title}
+            {/* {currentAnime.title} */}
+            Pak Juli
           </h1>
           <p className="mb-4 text-xs md:text-base">
             Episodes: {currentAnime.episodes} | Released:{" "}
